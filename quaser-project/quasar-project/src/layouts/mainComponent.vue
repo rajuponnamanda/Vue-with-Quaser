@@ -8,7 +8,7 @@
             <div>
               <div class="text-container">
                 <p
-                  class="text"
+                  class="offer text"
                   style="
                     background-color: white;
                     height: fit-content;
@@ -54,7 +54,7 @@
               </div>
             </div>
             <div>
-              <span class="text-white">
+              <span class="strong text-white">
                 개발자가 필요하신가요
                 <strong
                   style="
@@ -150,7 +150,7 @@
         </div>
       </div>
       <!-- Carousel Column -->
-      <div class="col-6">
+      <div class="col-12 col-md">
         <div class="carosul">
           <carousel-column />
         </div>
@@ -159,7 +159,7 @@
 
     </q-page>
 
-    <div style="padding-bottom: 80px; margin-top: -30px">
+    <div class="swiper-cards-container" style="padding-bottom: 80px; margin-top: -30px">
       <swiperCards />
     </div>
   </q-page-container>
@@ -181,12 +181,9 @@ import swiperCards from '../layouts/swiper-cards.vue';
 
 /* Display cards in flex */
 
-/* .carosul {
+.carosul {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px; 
-} */
+}
 
 /* Style for salary-section */
 .salary-section {
@@ -233,5 +230,29 @@ import swiperCards from '../layouts/swiper-cards.vue';
 .cards-container {
   overflow-x: hidden;
   position: absolute;
+}
+/* Media query to hide swiper cards on mobile screens */
+@media only screen and (max-width: 600px) {
+  .swiper-cards-container {
+    display: none;
+  }
+  .salary-section{
+    display: none;
+  }
+  .strong{
+    display: none;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .text {
+    background-color:#8BC4FF; /* Change background color for mobile screens */
+  }
+  .arrow-down{
+    color: #8BC4FF;
+  }
+  .offer{
+    background-color:#8BC4FF; /* Change background color for mobile screens */
+  }
+ 
 }
 </style>

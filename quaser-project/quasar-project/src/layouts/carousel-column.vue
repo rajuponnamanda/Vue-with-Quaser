@@ -1,5 +1,5 @@
 <template>
-  <div class="container row">
+  <div class="container">
     <div class="text-container">
       <div
         style="
@@ -10,6 +10,7 @@
           justify-content: center;
           margin-right: 110px;
         "
+         class="offer"
       >
         <div
           style="
@@ -20,6 +21,7 @@
             padding-top: 2px;
             padding-bottom: 2px;
           "
+         
         >
           <svg
             width="18"
@@ -414,5 +416,21 @@ onMounted(() => {
   font-size: 14px !important;
   margin-bottom: 8px;
   margin-top: -px;
+}
+@media only screen and (max-width: 600px) {
+  /* Adjustments for mobile screens */
+  .card-slider {
+    align-items: center;
+   overflow-x: hidden;/* Ensure correct positioning of arrows */
+     /* Center arrows and swiper horizontally */
+  }
+  .offer{
+    margin-top: 40px;
+  }
+}
+.card-slider {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  position: relative; 
 }
 </style>

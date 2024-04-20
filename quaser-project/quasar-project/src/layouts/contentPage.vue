@@ -422,4 +422,5 @@
 .normal-font {
   margin-left: 5px; /* Add some space between the SVG and the text */
 }
+
 </style>

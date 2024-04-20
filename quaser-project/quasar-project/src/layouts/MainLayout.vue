@@ -36,9 +36,11 @@
                     </q-item>
                   </q-list>
                 </q-btn-dropdown>
-                <q-p color="transparent" class="menu-description">해외 개발자 활용 서비스</q-p>
+                <q-p color="transparent" class="menu-description hide-on-mobile">해외 개발자 활용 서비스</q-p>
+
               </div>
-              <q-btn color="white" text-color="blue" class="contact-button">문의하기</q-btn>
+              <q-btn color="white" text-color="blue" class="contact-button hide-on-mobile">문의하기</q-btn>
+
             </div>
           </q-toolbar-title>
         </q-toolbar>
@@ -61,6 +63,7 @@ import mainComponentVue from './mainComponent.vue';
 .bg-transparent {
   background: transparent !important;
 }
+
 
 .header-container {
   margin: 0 20px; /* Adjust margins as needed */
@@ -104,4 +107,9 @@ import mainComponentVue from './mainComponent.vue';
   font-size: 10px;
 }
 
+@media only screen and (max-width: 600px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
 </style>
