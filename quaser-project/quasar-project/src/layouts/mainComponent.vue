@@ -4,24 +4,24 @@
       <div class="row">
         <!-- Main Content Column -->
         <div class="col-12 col-md">
-          <div class="content-column" style="margin-left: 10px;">
+          <div class="content-column" style="margin-left: 10px">
             <div>
-              <div class="text-container">
+              <div
+                class="text-container"
+                style="
+                  background-color: white;
+                  height: 22px;
+                  width: fit-content;
+                  border-radius: 5px;
+                  color: #40e2e8;
+                  padding: 4px;
+                  align-items: center;
+                  align-content: center;
+                  position: relative; /* Ensure positioning context for absolute positioning */
+                "
+              >
                 <p
-                  class="offer text"
-                  style="
-                    background-color: white;
-                    height: fit-content;
-                    width: 110px;
-                    border-radius: 5px;
-                    color: #40e2e8;
-                    font-weight: 500;
-                    font-size: 12px;
-                    text-align: center;
-                    padding-bottom: 5px;
-                    padding-top: 5px;
-                    position: relative; /* Ensure positioning context for absolute positioning */
-                  "
+                  style="margin-bottom: 0px; font-weight: 700; font-size: 12px"
                 >
                   풀타임, 파트타임
                 </p>
@@ -147,19 +147,21 @@
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+        <!-- Carousel Column -->
+        <div class="col-12 col-md">
+          <div class="carosul">
+            <carousel-column />
+          </div>
         </div>
       </div>
-      <!-- Carousel Column -->
-      <div class="col-12 col-md">
-        <div class="carosul">
-          <carousel-column />
-        </div>
-      </div>
-    </div>
-
     </q-page>
 
-    <div class="swiper-cards-container" style="padding-bottom: 80px; margin-top: -30px">
+    <div
+      class="swiper-cards-container"
+      style="padding-bottom: 80px; margin-top: -30px"
+    >
       <swiperCards />
     </div>
   </q-page-container>
@@ -190,7 +192,6 @@ import swiperCards from '../layouts/swiper-cards.vue';
   display: flex;
 }
 
-
 .text-container {
   position: relative;
   display: inline-block; /* Ensure container wraps around content */
@@ -198,7 +199,7 @@ import swiperCards from '../layouts/swiper-cards.vue';
 
 .arrow-down {
   position: absolute;
-  bottom: 2px; /* Adjust as needed */
+  bottom: -13px; /* Adjust as needed */
   left: 11%;
   transform: translateX(-50%);
   color: white;
@@ -236,23 +237,21 @@ import swiperCards from '../layouts/swiper-cards.vue';
   .swiper-cards-container {
     display: none;
   }
-  .salary-section{
+  .salary-section {
     display: none;
   }
-  .strong{
+  .strong {
     display: none;
+  }
+  .text-container {
+    background-color: #8bc4ff !important; 
+    color: white !important;/* Change background color for mobile screens */
   }
 }
 @media only screen and (max-width: 600px) {
-  .text {
-    background-color:#8BC4FF; /* Change background color for mobile screens */
+  .arrow-down {
+    color: #8bc4ff;
   }
-  .arrow-down{
-    color: #8BC4FF;
-  }
-  .offer{
-    background-color:#8BC4FF; /* Change background color for mobile screens */
-  }
- 
+
 }
 </style>
